@@ -19,5 +19,6 @@ for i in range(0,15):
         maxprob = result[0][i]
         bestmatch = i+1
 
+print('\n\n',result)
 
 print('The person detected is Subject #{}'.format(bestmatch))

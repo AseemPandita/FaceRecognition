@@ -35,10 +35,10 @@ cnn.add(Conv2D(filters=32, kernel_size=3, activation='relu'))
 cnn.add(MaxPool2D(pool_size=2, strides=2))
 cnn.add(Flatten())
 cnn.add(Dense(units=128, activation='relu'))
-cnn.add(Dense(units=15, activation='sigmoid'))
+cnn.add(Dense(units=15, activation='softmax'))
 
 # Compile the CNN
-cnn.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
+cnn.compile(optimizer = 'adam', loss = 'categorical_crossentropy', metrics = ['accuracy'])
 
 # Fit the data to the CNN
 cnn.fit(x = training_set, validation_data = validation_set, epochs = 25)
